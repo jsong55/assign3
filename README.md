@@ -4,5 +4,13 @@
 # uploading to git
 
 git add .
+
 git commit -m "commit message"
+
 git push
+
+# pulling from git
+
+git fetch
+
+git pull
