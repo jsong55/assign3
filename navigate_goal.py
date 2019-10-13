@@ -10,7 +10,7 @@ def move_to_goal(xGoal, yGoal):
 
 	ac = actionlib.SimpleActionClient("move_base", MoveBaseAction)
 
-	while(not ac.wait_for_server(rospy.Ducation.from_sec(5))):
+	while(not ac.wait_for_server(rospy.Duration.from_sec(5))):
 		rospy.loginfo("Waiting for the move_base action server to come up")
 
 	goal = MoveBaseGoal()
