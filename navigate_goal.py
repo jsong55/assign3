@@ -21,10 +21,10 @@ def move_to_goal(xGoal, yGoal):
 	# moving towards the goal */
 	goal.target_pose.pose.position = Point(xGoal,yGoal,0)
 
-	#or
-	#goal.target_pose.pose.position.x = xGoal
-	#goal.target_pose.pose.position.y = yGoal
-	#goal.target_pose.pose.position.z = 0
+	
+	goal.target_pose.pose.position.x = xGoal
+	goal.target_pose.pose.position.y = yGoal
+	goal.target_pose.pose.position.z = 0
 
 	goal.target_pose.pose.orientation.x = 0.0
 	goal.target_pose.pose.orientation.y = 0.0
@@ -45,8 +45,29 @@ def move_to_goal(xGoal, yGoal):
 
 if __name__ == '__main__':
 	rospy.init_node('map_navigation', anonymous = False)
-	x_goal = -2.124123124
-	y_goal = 4.021231254123
+
+	waypoint = input("Let's go to a position from 1-5, 1 is bottom-left, 2 is the top-left, 3 is top-right, 4 is bottom-right, 5 is going outside the room:::: ")
+	if (waypoint == 1):
+		x_goal = -1.2
+		y_goal = 4.7
+	elif (waypoint == 2):
+		x_goal = -2.62
+		y_goal = 10.49
+	elif (waypoint == 3):
+		x_goal = 2.05
+		y_goal = 10.965
+	elif (waypoint == 4):
+		x_goal = 2.79
+		y_goal = 5.163
+	elif (waypoint == 5):
+		x_goal = -2.21266
+		y_goal = 11.02927
+		rospy.sleep(2)
+		x_goal = -2.7870
+		y_goal = 13.5307
+	else: 
+		print'unknown waypoint, try again'
+
 	print'start go to goal'
 	move_to_goal(x_goal,y_goal)
 	rospy.spin()
