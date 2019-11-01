@@ -1,0 +1,3 @@
+<launch>
+	<node name="voice_cmd_vel" pkg="pocketsphinx" type="voice_cmd_vel.py" />
+</launch>

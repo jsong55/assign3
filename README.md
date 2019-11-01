@@ -1,27 +1,23 @@
-# assign3
- assignment 3 for CS 580R
+# Assignment 3 CS 580R
 
-# uploading to git
+By Nicholas Abate and Jiaxu Song
 
-git add .
+## Launch files included
 
-git commit -m "commit message"
+assign3_bringup.launch - Launching this file will bringup the turtlebot and get it ready to take an rviz pose.
 
-git push
+assign3_navigation.launch - Launching this file will begin autonomous navigation.
 
-# pulling from git
+assign3_voice.launch - Launching this file will bring up the voice command controller.
 
-git fetch
+## Included packages
 
-git pull
+There are two packages included in this submission.
 
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
-catkin_make
-cd ~/catkin_src
-catkin_create_pkg package_name std_msgs rospy actionlib tf geometry_msgs move_base_msgs
-catkin_make
+### assign3
 
-roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=.......
-roslaunch turtlebot_gazebo amcl_demo.launch map_file:=.......yaml
-roslaunch turtlebot_rviz_launchers view_navigation.launch
+Assign3 contains code for SLAM, Rviz integration, and autonomous navigation. It also contains the launch files described above.
+
+### pocketsphinx
+
+The pocketsphinx package is a slight modification from the open-source ROS kinetic pocketsphinx package. This package allows for voice recognition and commands. When using this code, make sure to follow the README.md in this package to ensure all dependencies are installed.

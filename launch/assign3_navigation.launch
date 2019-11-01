@@ -1,0 +1,3 @@
+<launch>
+	<node name="navigation_goal" pkg="AbateN" type="navigate_goal.py"/>
+</launch>

@@ -1,4 +1,4 @@
-image: /home/jiaxu/catkin_ws/src/assign3/map/labmap.pgm
+image: labmap.pgm
 resolution: 0.050000
 origin: [-26.600000, -1.000000, 0.000000]
 negate: 0
